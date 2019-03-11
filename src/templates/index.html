@@ -1,0 +1,38 @@
+{% block title %} 
+ivideo
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>ivideo</h1>
+    </div>
+    <p>呵呵</p>
+    <form action class="form" role="form" method="POST">
+        {{ form.csrf }}
+      <div>{{ form.parser.label }}: {{ form.parser }}</div>
+      <div>{{ form.url.label }}: {{ form.url }}</div>
+      <!-- <div>{{ form.submit.label }}:{{ form.submit()}}</div> -->
+      <input class="btn btn-default" id="submit" name="submit" type="submit" value="解析">
+    </form>
+    <br>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">支持的视频平台</h3>
+        </div>
+        <div class="panel-body">
+            {% for platform in platforms %}
+                <button class="btn btn-secondary">
+                    <a href="{{platform[0]}}" target="_blank">{{platform[1]}}</a>
+                </button>
+            {% endfor %}
+        </div>
+    </div>
+    <small>
+        <a href="https://github.com/lai-bluejay/vipeo-starlette" target="_blank">fork me</a>
+        <a href="https://jithub.cn/" target="_blank">my blog- 一朝一夕，惟愿卿安</a>
+        <a href="https://lai-bluejay.github.io/online-cv/" target="_blank">about me-online cv</a>
+    </small> 
+</div>
+{% endblock %}
