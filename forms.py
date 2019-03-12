@@ -7,14 +7,14 @@ Author: Charles_Lai
 Email: lai.bluejay@gmail.com
 """
 import requests
-
+import json
 from wtforms import Form, TextField, StringField, SelectField, SubmitField, validators
 from wtforms.validators import DataRequired
 from wtforms.compat import iteritems
 
 def make_choice(api_name):
-    vip_json = "https://iodefog.github.io/text/mviplistmm.json"
-    api = requests.get(vip_json).json()
+    with open('assets/lists.json', ) as fi:
+        api = json.load(fi)
     return [(a['url'], a['name']) for a in api[api_name]]
 
 

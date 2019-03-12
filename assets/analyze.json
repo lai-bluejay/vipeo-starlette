@@ -1,0 +1,90 @@
+{
+    "new_version_info": {
+      "latest_version": "1.0",
+      "update_message": "更新线路"
+    },
+    "platformlist": [
+      {
+        "name": "爱奇艺",
+        "url": "http://www.iqiyi.com/"
+      },
+      {
+        "name": "腾讯视频",
+        "url": "https://v.qq.com/"
+      },
+      {
+        "name": "芒果",
+        "url": "https://www.mgtv.com/"
+      },
+      {
+        "name": "优酷",
+        "url": "https://www.youku.com/"
+      },
+      {
+        "name": "搜狐视频",
+        "url": "https://tv.sohu.com/"
+      },
+      {
+        "name": "乐视视频",
+        "url": "https://www.le.com/"
+      },
+      {
+        "name": "电影天堂",
+        "url": "http://www.btbtdy.net/"
+      },
+      {
+        "name": "52影院",
+        "url": "http://www.52xsba.com/"
+      },
+      {
+        "name": "4080新视觉影院",
+        "url": "http://www.yy4080.com/"
+      }
+    ],
+    "list": [
+      {
+        "url": "",
+        "name": "如发现不可解析的线路，请及时联系作者"
+      },
+      {
+        "url": "https://api.lequgirl.com/?url=",
+        "name": "推荐线路1"
+      },
+      {
+        "url": "https://jx.lache.me/cc/?url=",
+        "name": "推荐线路2"
+      },
+      {
+        "url": "https://api.653520.top/vip/?url=",
+        "name": "推荐线路3"
+      },
+      {
+        "url": "https://api.bbbbbb.me/jx/?url=",
+        "name": "推荐线路4"
+      },
+      {
+        "url": "https://jx.ab33.top/vip/?url=",
+        "name": "推荐线路5"
+      },
+      {
+        "url": "https://vip.mpos.ren/v/?url=",
+        "name": "推荐线路6"
+      },
+      {
+        "url": "https://jx.000180.top/jx/?url=",
+        "name": "推荐线路7"
+      },
+      {
+        "url": "https://jx.km58.top/jx/?url=",
+        "name": "推荐线路8"
+      },
+      {
+        "url": "https://www.1717yun.com/jx/ty.php?url=",
+        "name": "推荐线路9"
+      },
+      {
+        "url": "https://cdn.yangju.vip/k/?url=",
+        "name": "推荐线路10"
+      }
+    ]
+  }
