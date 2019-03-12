@@ -9,5 +9,6 @@ vip_json = "https://iodefog.github.io/text/mviplistmm.json"
 
 ## 部署 leancloud
 leancloud 只支持wsgi的部署，Python2 的flask框架会方便很多 
-参考branch： lean2。
+参考branch： [lean2](https://github.com/lai-bluejay/vipeo-starlette/tree/lean2)。
+参考文档：[lean2-README.md](https://github.com/lai-bluejay/vipeo-starlette/blob/lean2/README.1.md)
 

@@ -5,7 +5,12 @@
 
 ## 本地运行
 
-首先确认本机已经安装 [Python](http://python.org/) 运行环境和lean cli。然后执行下列指令：
+首先确认本机已经安装 [Python](http://python.org/) 运行环境和lean cli。
+```
+brew update
+brew install lean-cli
+```
+然后执行下列指令：
 
 ## 初始化你的flask项目
 按提示进行
