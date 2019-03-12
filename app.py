@@ -2,7 +2,7 @@
 
 from datetime import datetime
 
-from flask import Flask, redirect
+from flask import Flask, redirect, request
 from flask import render_template
 from flask_sockets import Sockets
 
@@ -18,8 +18,10 @@ app.register_blueprint(todos_view, url_prefix='/todos')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    form = VipListForm()
+    xform = request.form
+    form = VipListForm(xform)
     platforms = make_choice('platformlist')
+
     if form.validate():
         new_url = form.parser.data + form.url.data
         return redirect(new_url)
