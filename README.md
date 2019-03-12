@@ -8,5 +8,6 @@ vip_json = "https://iodefog.github.io/text/mviplistmm.json"
 没有选用Kenneth Reiz的responder。
 
 ## 部署 leancloud
-
+leancloud 只支持wsgi的部署，Python2 的flask框架会方便很多 
+参考branch： lean2。
 

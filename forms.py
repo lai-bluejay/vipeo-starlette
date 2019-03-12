@@ -1,5 +1,11 @@
-from starlette.requests import Request
-from starlette.responses import Response
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+/Users/charleslai/PycharmProjects/ivideo-flask.forms.py was created on 2019/03/12.
+file in :relativeFile
+Author: Charles_Lai
+Email: lai.bluejay@gmail.com
+"""
 import requests
 
 from wtforms import Form, TextField, StringField, SelectField, SubmitField, validators
@@ -16,9 +22,9 @@ sentinel = object()
 SUBMIT_VERBS = frozenset({'DELETE', 'PATCH', 'POST', 'PUT'})
 
 class VipListForm(Form):
-    parser = SelectField('解析线路', validators=[validators.DataRequired()], choices=make_choice('list'), coerce=str)
-    url = StringField('视频地址', validators=[validators.DataRequired()])
-    submit = SubmitField('解析')
+    parser = SelectField(u'解析线路', validators=[validators.DataRequired()], choices=make_choice('list'), coerce=str)
+    url = StringField(u'视频地址', validators=[validators.DataRequired()])
+    submit = SubmitField(u'解析')
 
 
     

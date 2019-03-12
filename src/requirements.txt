@@ -1,6 +1,0 @@
-aiofiles
-jinja2
-starlette
-uvicorn
-wtforms
-requests
