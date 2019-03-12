@@ -1,12 +1,12 @@
 {% block title %} 
-ivideo
+VIP 视频解析
 {% endblock %}
 
 
 {% block content %}
 <div class="container">
     <div class="page-header">
-        <h1>ivideo</h1>
+        <h1>VIP 视频解析</h1>
     </div>
     <form action class="form" role="form" method="POST">
       <div>{{ form.parser.label }}: {{ form.parser }}</div>
@@ -14,6 +14,8 @@ ivideo
       <!-- <div>{{ form.submit.label }}:{{ form.submit()}}</div> -->
       <input class="btn btn-default" id="submit" name="submit" type="submit" value="解析">
     </form>
+    <p>如果无法解析播放，请联系作者。QQ:610395649</p>
+    <p>或者到博客下留言：<a href="https://www.jithub.cn/" target="_blank">my blog- 一朝一夕，惟愿卿安</a></p>
     <br>
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -27,9 +29,11 @@ ivideo
             {% endfor %}
         </div>
     </div>
+    <p></p>
+    <p></p>
     <small>
         <a href="https://github.com/lai-bluejay/vipeo-starlette" target="_blank">fork me</a>
-        <a href="https://jithub.cn/" target="_blank">my blog- 一朝一夕，惟愿卿安</a>
+        <a href="https://www.jithub.cn/" target="_blank">my blog- 一朝一夕，惟愿卿安</a>
         <a href="https://lai-bluejay.github.io/online-cv/" target="_blank">about me-online cv</a>
     </small> 
 </div>

@@ -13,7 +13,7 @@ from wtforms.validators import DataRequired
 from wtforms.compat import iteritems
 
 def make_choice(api_name):
-    with open('assets/lists.json', ) as fi:
+    with open('assets/analyze.json', ) as fi:
         api = json.load(fi)
     return [(a['url'], a['name']) for a in api[api_name]]
 
