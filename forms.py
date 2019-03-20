@@ -23,7 +23,7 @@ SUBMIT_VERBS = frozenset({'DELETE', 'PATCH', 'POST', 'PUT'})
 
 class VipListForm(Form):
     parser = SelectField(u'解析线路', validators=[validators.DataRequired()], choices=make_choice('list'), coerce=str)
-    url = StringField(u'视频地址', validators=[validators.DataRequired()])
+    url = StringField(u'请输入视频地址', validators=[validators.DataRequired()])
     submit = SubmitField(u'解析')
 
 

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/static/css/material.min.css">
     <script src="/static/js/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="//cdn.muicss.com/mui-0.9.41/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.9.41/js/mui.min.js"></script>
 
     <title>VIP 视频解析</title>
 
@@ -29,6 +31,7 @@
             color: #fff;
         }
     </style>
+
 </head>
 
 <body>
@@ -69,28 +72,35 @@
                             <h2 class="mdl-card__title-text">Welcome</h2>
                         </div>
                         <div>
-                            <form action class="form" role="form" method="POST">
-                                <div>{{ form.parser.label }}: {{ form.parser }}</div>
-                                <div>{{ form.url.label }}: {{ form.url }}</div>
+                            <form action class="mui-form" role="form" method="POST">
+                                <div class="mui-select"><label>{{ form.parser.label }}</label> {{ form.parser(class="mui-select")}}</div>
+                                <div class="mui-textfield mui-textfield--float-label">
+                                    <textarea required></textarea>
+                                    <label>{{ form.url.label }}</label>
+                                </div>
                                 <!-- <div>{{ form.submit.label }}:{{ form.submit()}}</div> -->
-                                <input class="btn btn-default" id="submit" name="submit" type="submit" value="解析">
+                                <input class="mui-btn mui-btn--raised" id="submit" name="submit" type="submit"
+                                    value="解析">
                             </form>
 
                         </div>
                         <div class="mdl-card__supporting-text">
-                                目前反馈最好的是线路2，基本解析所有视频，包括bilibili大会员，但是有广告。
+                            目前反馈最好的是线路2，基本解析所有视频，包括bilibili大会员，但是有广告。
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
-                            <a href="https://github.com/lai-bluejay/vipeo-starlette" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                                star it 
+                            <a href="https://github.com/lai-bluejay/vipeo-starlette"
+                                class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                star it
                             </a>
                         </div>
                         <div class="mdl-card__menu">
                             <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                                <a class="material-icons" href="https://github.com/lai-bluejay/vipeo-starlette" target="_blank">fork</a>
+                                <a class="material-icons" href="https://github.com/lai-bluejay/vipeo-starlette"
+                                    target="_blank">fork</a>
                             </button>
                         </div>
                     </div>
+
                     <p>如果无法解析播放，请联系作者。QQ:610395649</p>
                     <p>或者到博客下留言：<a href="https://www.jithub.cn/" target="_blank">my blog- 一朝一夕，惟愿卿安</a></p>
                     <br>
