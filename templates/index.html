@@ -1,40 +1,130 @@
-{% block title %} 
-VIP 视频解析
-{% endblock %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/material.min.css">
+    <script src="/static/js/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>VIP 视频解析</title>
+
+    <!-- Wide card with share menu button -->
+    <style>
+        .demo-card-wide.mdl-card {
+            width: 512px;
+        }
+
+        .demo-card-wide>.mdl-card__title {
+            color: #fff;
+            height: 176px;
+            background: url('/static/welcome_card.jpg') center / cover;
+        }
+
+        .demo-card-wide>.mdl-card__menu {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">VIP 视频解析</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <!-- <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a> -->
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">VIP 视频解析</span>
+            <nav class="mdl-navigation">
+                <!-- <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a> -->
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div align="center" class="page-content">
+                <div class="container">
 
 
-{% block content %}
-<div class="container">
-    <div class="page-header">
-        <h1>VIP 视频解析</h1>
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Welcome</h2>
+                        </div>
+                        <div>
+                            <form action class="form" role="form" method="POST">
+                                <div>{{ form.parser.label }}: {{ form.parser }}</div>
+                                <div>{{ form.url.label }}: {{ form.url }}</div>
+                                <!-- <div>{{ form.submit.label }}:{{ form.submit()}}</div> -->
+                                <input class="btn btn-default" id="submit" name="submit" type="submit" value="解析">
+                            </form>
+
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                                目前反馈最好的是线路2，基本解析所有视频，包括bilibili大会员，但是有广告。
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a href="https://github.com/lai-bluejay/vipeo-starlette" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                star it 
+                            </a>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                <a class="material-icons" href="https://github.com/lai-bluejay/vipeo-starlette" target="_blank">fork</a>
+                            </button>
+                        </div>
+                    </div>
+                    <p>如果无法解析播放，请联系作者。QQ:610395649</p>
+                    <p>或者到博客下留言：<a href="https://www.jithub.cn/" target="_blank">my blog- 一朝一夕，惟愿卿安</a></p>
+                    <br>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">支持的视频平台</h3>
+                        </div>
+                        <div class="panel-body">
+                            {% for platform in platforms %}
+                            <!-- Raised button with ripple -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                <a href="{{platform[0]}}" target="_blank">{{platform[1]}}</a>
+                            </button>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">点一下</div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="https://github.com/lai-bluejay/vipeo-starlette" target="_blank">fork me</a></li>
+                        <li> <a href="https://www.jithub.cn/" target="_blank">my blog- 一朝一夕，惟愿卿安</a></li>
+                        <li><a href="https://lai-bluejay.github.io/online-cv/" target="_blank">about me-online cv</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
     </div>
-    <form action class="form" role="form" method="POST">
-      <div>{{ form.parser.label }}: {{ form.parser }}</div>
-      <div>{{ form.url.label }}: {{ form.url }}</div>
-      <!-- <div>{{ form.submit.label }}:{{ form.submit()}}</div> -->
-      <input class="btn btn-default" id="submit" name="submit" type="submit" value="解析">
-    </form>
-    <p>如果无法解析播放，请联系作者。QQ:610395649</p>
-    <p>或者到博客下留言：<a href="https://www.jithub.cn/" target="_blank">my blog- 一朝一夕，惟愿卿安</a></p>
-    <br>
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            <h3 class="panel-title">支持的视频平台</h3>
-        </div>
-        <div class="panel-body">
-            {% for platform in platforms %}
-                <button class="btn btn-secondary">
-                    <a href="{{platform[0]}}" target="_blank">{{platform[1]}}</a>
-                </button>
-            {% endfor %}
-        </div>
-    </div>
-    <p></p>
-    <p></p>
-    <small>
-        <a href="https://github.com/lai-bluejay/vipeo-starlette" target="_blank">fork me</a>
-        <a href="https://www.jithub.cn/" target="_blank">my blog- 一朝一夕，惟愿卿安</a>
-        <a href="https://lai-bluejay.github.io/online-cv/" target="_blank">about me-online cv</a>
-    </small> 
-</div>
-{% endblock %}
+
+
+
+</body>
+
+
+</html>
